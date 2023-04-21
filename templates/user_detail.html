@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="d-flex container mb-5">
+    <div class="container" style="margin-left:80px; width:35%;">
+        <h3>User Details</h3>
+        <div class="fw-bold">Username:</div>
+        {{user.username}}
+        <div class="fw-bold mt-2">First Name:</div>
+        {{user.first_name}}
+        <div class="fw-bold mt-2">Last Name:</div>
+        {{user.last_name}}
+        <div class="fw-bold mt-2">Email:</div>
+        {{user.email}}
+        <div class="mt-2">
+            <form action="/users/{{user.username}}/delete" method="POST">
+                <button class="btn btn-danger p-1">Delete User</button>
+            </form>
+        </div>
+    </div>
+    <div class="container me-5">
+        <h3>Feedback</h3>
+        {% for feedback in user.feedback %}
+        <div class="fw-bold">{{feedback.title}}
+            <a href='/feedback/{{feedback.id}}/update' class="btn d-inline p-0"><i class="fa-solid fa-pen-to-square"></i></a>
+            <form action='/feedback/{{feedback.id}}/delete' method="POST" class="d-inline">
+                <button class="btn p-0"><i class="fa-solid fa-trash"></i></button>
+            </form>
+        </div>
+        <div class="mb-2">{{feedback.content}}</div>
+        {% endfor %}
+        <a href="/users/{{user.username}}/feedback/add" class="btn btn-secondary">Submit Feedback</a>
+    </div>
+</div>
+{% endblock %}
