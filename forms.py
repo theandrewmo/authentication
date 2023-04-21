@@ -8,8 +8,8 @@ class AddUserForm(FlaskForm):
     username = StringField('username', validators=[InputRequired()])
     password = PasswordField('password', validators=[InputRequired()])
     email = StringField('email', validators=[InputRequired()])
-    first_name = StringField('first_name', validators=[InputRequired()])
-    last_name = StringField('last_name', validators=[InputRequired()])
+    first_name = StringField('first name', validators=[InputRequired()])
+    last_name = StringField('last name', validators=[InputRequired()])
 
 class LoginForm(FlaskForm):
     """ Form for adding users """
