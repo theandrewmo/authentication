@@ -95,7 +95,7 @@ This application has the following routes:
 - `/feedback/<feedback_id>/update` (POST) - handles the feedback edit form submission
 - `/feedback/<feedback_id>/delete` - handles the deletion of feedback with the specified `id`
 
-![screenshot](Screen Shot 2023-04-21 at 12.02.23 PM.png)
+![screenshot](images/Screen Shot 2023-04-21 at 12.02.23 PM.png)
 
 ## License
 
