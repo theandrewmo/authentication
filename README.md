@@ -96,6 +96,8 @@ This application has the following routes:
 - `/feedback/<feedback_id>/delete` - handles the deletion of feedback with the specified `id`
 
 ![screenshot](images/Screen%20Shot%202023-04-21%20at%2012.02.23%20PM.png)
+![screenshot](images/Screen%20Shot%202023-04-21%20at%2012.02.33%20PM.png)
+![screenshot](images/Screen%20Shot%202023-04-21%20at%2012.02.55%20PM.png)
 
 ## License
 
